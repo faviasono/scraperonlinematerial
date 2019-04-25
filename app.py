@@ -5,6 +5,14 @@ from utils import *
 menu = {1: download_video_lecture, 2: download_material_wrapper}
 
 
+def classes_print(classes):
+    i=0
+    for course in classes:
+        if i > 0:
+            print(str(i)+'. '+course)
+        i += 1
+
+
 def main():
 
     driver = init_driver()
@@ -14,9 +22,19 @@ def main():
     login(driver, values.user, values.psw)
 
     courses = get_available_classes(driver)
-    print_classes(courses)
+    classes_print(courses)
 
-    course_name = 'fisica ii' # select class name among your semester classes
+    while True:
+        try:
+            sel = int(input('Insert the number of the course: '))
+
+            if sel == 0 or not sel <= len(courses.keys())-1:
+                raise Exception
+            break
+        except:
+            print('\nInsert numeric values lower than '+str(len(courses.keys())-1)+'\n')
+
+    course_name = list(courses)[sel]
 
     sel = 0
     while True:

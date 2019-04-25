@@ -1,7 +1,6 @@
 import requests
 from clint.textui import progress
 
-
 def download_file(url, name_file):
     print('\n')
     r = requests.get(url, stream=True)
@@ -25,10 +24,3 @@ def get_available_classes(driver):
             classes[tr.text.lower().strip()] = tr.get_attribute('href')
         i += 1
     return classes
-
-
-def print_classes(classes):
-    i=1
-    for course in classes:
-        print(str(i)+'. '+course.title())
-
