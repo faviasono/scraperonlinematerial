@@ -13,7 +13,7 @@ To run this project you need to install these components on your machine:
 ## Usage
 
 ```
-python3 app.py -u <username> -p <password> -s
+python3 app.py -u <username> -p <password>
 ```
 
 ## Built With
