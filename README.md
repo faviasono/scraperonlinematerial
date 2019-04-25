@@ -3,7 +3,6 @@
 My university, Politecnico di Torino, provides useful video lectures visible on the online platform. However, it is not possible to download them all together and watch them offline. You need to download each one after the other and I was tired of this procedure, and hence I have develop this program to download both course material (e.g. slides) and video lectures directly.
 
 ## Getting Started
-
 To run this project you need to install these components on your machine:
 * Python 3.7
 * Google Chrome 74.x
@@ -17,7 +16,7 @@ Feel free to uncomment the line below in the _configuration.py_ if you only  wan
 # options.add_argument('headless') 
 ```
 ### Material downloader
-The program will download all the course in the _Downloads_ directory of your os. After thast, it will create an hierarchical structure in the _Desktop_ folder. There should not be a folder called as _Name_Course_Material_ in Desktop, or it will raise an exception.
+The program will download all the course in the _Downloads_ directory of your os. After thast, it will create an hierarchical structure in the _Desktop_ folder. There should not be a folder called as _Name_Course_Material_ in Desktop, or the program will raise an exception.
 
 ## Usage
 You must write in _course_name_ variable in **app.py** the name of the course in your semester curriculum. (in the code is selected _Fisica II / Physics II_ )
@@ -25,7 +24,5 @@ You must write in _course_name_ variable in **app.py** the name of the course in
 python3 app.py -u <username> -p <password>
 ```
 
-
 ## Built With
-
-* [Python 3](https://docs.python.org/3/) - Scripting language used
+* [Python 3](https://docs.python.org/3/)
