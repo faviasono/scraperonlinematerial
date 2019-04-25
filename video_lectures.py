@@ -23,8 +23,8 @@ def rearrage_path(course_name, files_path, dest_path):
                     print(file + ' not found in download. It may have a different name')
 
 
-def download_material_wrapper(driver,course_name):
-    files_path = download_course_material(driver,course_name)
+def download_material_wrapper(driver, course_name):
+    files_path = download_course_material(driver, course_name)
     if not files_path:
         print('Any material available')
     else:
@@ -68,6 +68,7 @@ def download_course_material(driver, course_name):
             values[i].click()
             time.sleep(3)
             file_text = max([os.path.join(os.getenv('HOME') + '/Downloads', d) for d in os.listdir(os.getenv('HOME') +'/Downloads')],key=os.path.getmtime)  # get the latest file downloaded ( they may have a different name from html value)
+            rename_if_space(file_text)
             files_path['default'].append(file_text.replace(' ', '_'))
             i += 1
         else:
@@ -84,6 +85,7 @@ def download_course_material(driver, course_name):
                 time.sleep(3)
                 file_text = max([os.path.join(os.getenv('HOME') + '/Downloads', d) for d in
                                  os.listdir(os.getenv('HOME') + '/Downloads')], key=os.path.getmtime) #get the latest file downloaded ( they may have a different name from html value)
+                rename_if_space(file_text)
                 files_path[folder_name].append(file_text.replace(' ', '_'))
 
             # click the back button & wait js
@@ -95,10 +97,12 @@ def download_course_material(driver, course_name):
 
     return files_path
 
+def rename_if_space(file_text):
+    if file_text.__contains__(' '):
+        os.rename(file_text,file_text.replace(' ', '_'))
+
 
 def download_video_lecture(driver, course_name):
-
-    driver.get("https://didattica.polito.it/portal/page/portal/home/Studente")
     classes = get_available_classes(driver)
     driver.get(classes[course_name])
     url_material = driver.find_element_by_xpath('//*[@id="menu_pag_corso"]/li[5]/a').get_attribute('href')

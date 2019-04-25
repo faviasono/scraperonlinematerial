@@ -1,5 +1,6 @@
 from utils.configuration import *
 from video_lectures import *
+from utils import *
 
 menu = {1: download_video_lecture, 2: download_material_wrapper}
 
@@ -11,6 +12,9 @@ def main():
     values = arg_parser()
 
     login(driver, values.user, values.psw)
+
+    courses = get_available_classes(driver)
+    print_classes(courses)
 
     course_name = 'fisica ii' # select class name among your semester classes
 
