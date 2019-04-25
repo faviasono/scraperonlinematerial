@@ -9,6 +9,13 @@ To run this project you need to install these components on your machine:
 * Google Chrome 74.x
 * Selenium Webdriver library for chrome version 74.X
 
+## Problems
+It is possible to use _headless_ chrome only to download video lectures. However, since the program must interact with Javascript to downlaod material files (they don't have a visible url) we have to keep chrome in a window.
+Feel free to uncomment the line below in the _configuration.py_ if you only  want to download video lectures with chrome in background.
+```
+# options.add_argument('headless') 
+```
+
 
 ## Usage
 

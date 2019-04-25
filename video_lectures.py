@@ -2,7 +2,7 @@ import os
 import re
 import time
 import shutil
-from utils import download_file
+from utils.utils import download_file, get_available_classes
 
 
 def rearrage_path(course_name, files_path, dest_path):
@@ -23,7 +23,7 @@ def rearrage_path(course_name, files_path, dest_path):
                     print(file + ' not found in download. It may have a different name')
 
 
-def download_material_wrapper(driver,course_name,start):
+def download_material_wrapper(driver,course_name):
     files_path = download_course_material(driver,course_name)
     if not files_path:
         print('Any material available')
@@ -96,7 +96,7 @@ def download_course_material(driver, course_name):
     return files_path
 
 
-def download_video_lecture(driver, course_name, start):
+def download_video_lecture(driver, course_name):
 
     driver.get("https://didattica.polito.it/portal/page/portal/home/Studente")
     classes = get_available_classes(driver)
@@ -115,6 +115,16 @@ def download_video_lecture(driver, course_name, start):
     lesson_list = driver.find_element_by_id('lessonList')
     elements = lesson_list.find_elements_by_class_name('h5')
     len_list = len(elements)
+
+
+    while True:
+        try:
+            start = int(input('Insert the video lecture you want to start from [1 default]'))
+            if start == 0:
+                raise Exception
+            break
+        except:
+            print("That's not a valid option!")
 
     i = get_start_index(name_course, start - 1)
 
