@@ -6,8 +6,8 @@ My university, Politecnico di Torino, provides useful video lectures visible on 
 
 To run this project you need to install these components on your machine:
 * Python 3.7
-* Google Chrome 73.x
-* Selenium Webdriver library
+* Google Chrome 74.x
+* Selenium Webdriver library for chrome version 74.X
 
 
 ## Usage
