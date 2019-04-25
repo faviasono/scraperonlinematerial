@@ -23,7 +23,7 @@ You must write in _course_name_ variable in **app.py** the name of the course in
 ```
 python3 app.py -u <username> -p <password>
 ```
-## To do list
+## Task List
 - [ ] input course name & check if it exists
 - [ ] headless chrome with material downloader 
 - [ ] add screenshots
