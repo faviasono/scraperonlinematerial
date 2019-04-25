@@ -29,3 +29,12 @@ def arg_parser():
     parser.add_argument('-psw', '-p', help='password', nargs='?', type=str)
     return parser.parse_args()
 
+
+def classes_print(classes):
+    i=0
+    for course in classes:
+        if i > 0:
+            print(str(i)+'. '+course)
+        i += 1
+
+
