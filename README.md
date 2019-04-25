@@ -8,7 +8,7 @@ To run this project you need to install these components on your machine:
 * Python 3.7
 * Google Chrome 73.x
 * Selenium Webdriver library
-* terminal-notifier (Mac)
+
 
 ## Usage
 
