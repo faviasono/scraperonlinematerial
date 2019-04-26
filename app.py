@@ -15,7 +15,7 @@ def main():
     courses = get_available_classes(driver)
     classes_print(courses)
 
-    # select among classes
+    # select among available classes
     while True:
         try:
             sel = int(input('Insert the number of the course: '))
