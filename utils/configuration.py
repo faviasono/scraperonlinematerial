@@ -19,7 +19,6 @@ def init_driver():
     options.add_argument('window-size=1200x600')
     prefs = {'download.default_directory': os.getenv('HOME') + '/Downloads'}
     options.add_experimental_option('prefs', prefs)
-
     return webdriver.Chrome(executable_path='bin/chromedriver', options=options)
 
 
@@ -28,13 +27,4 @@ def arg_parser():
     parser.add_argument('-user', '-u', help='Username', nargs='?', type=str)
     parser.add_argument('-psw', '-p', help='password', nargs='?', type=str)
     return parser.parse_args()
-
-
-def classes_print(classes):
-    i=0
-    for course in classes:
-        if i > 0:
-            print(str(i)+'. '+course)
-        i += 1
-
 
