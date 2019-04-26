@@ -16,7 +16,7 @@ Feel free to uncomment the line below in the _configuration.py_ if you only  wan
 # options.add_argument('headless') 
 ```
 ### Material downloader
-The program will download all the course in the _Downloads_ directory of your os. After thast, it will create an hierarchical structure in the _Desktop_ folder. There should not be a folder called as _Name_Course_Material_ in Desktop, or the program will raise an exception.
+The program will download all the course in the _Downloads_ directory of your os. After that, it will create an hierarchical structure in the _Desktop_ folder. There should not be a folder called as _Name_Course_Material_ in Desktop, or the program will raise an exception.
 
 ## Usage
 ```
