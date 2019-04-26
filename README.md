@@ -25,7 +25,7 @@ python3 app.py -u <username> -p <password>
 ## Task List
 - [x] input course name & check if it exists
 - [ ] headless chrome with material downloader 
-- [ ] add screenshots
+- [x] add screenshots
 - [ ] considering new video lectures online platform for scraping & other courses name 
 
 ## Built With
