@@ -29,7 +29,7 @@ def main():
     # get the course name
     course_name = list(courses)[sel]
 
-    #
+    # select among material or lectures download
     sel = 1
     while True:
         try:
@@ -43,6 +43,7 @@ def main():
         except:
             print('Insert numeric values in range ' + str(list(menu.keys())) + '\n')
 
+    # start the function selected
     menu[sel](driver, course_name, courses)
 
     driver.close()
