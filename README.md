@@ -22,6 +22,15 @@ The program will download all the course in the _Downloads_ directory of your os
 ```
 python3 app.py -u <username> -p <password>
 ```
+## Screenshots
+<img width="800" alt="00home_page" src="https://user-images.githubusercontent.com/37707874/56802054-56243880-681f-11e9-9ca6-80ee1f541ad5.png">
+
+<img width="800" alt="02_material_folders" src="https://user-images.githubusercontent.com/37707874/56802153-9a173d80-681f-11e9-93b9-23084bc823fa.png">
+
+<img width="800" alt="01_material_page" src="https://user-images.githubusercontent.com/37707874/56802187-aef3d100-681f-11e9-89cc-39eb042510bb.png">
+
+<img width="1440" alt="03_video_lectures_page" src="https://user-images.githubusercontent.com/37707874/56802229-cd59cc80-681f-11e9-9b9e-3437dcfb6b40.png">
+
 ## Task List
 - [x] input course name & check if it exists
 - [ ] headless chrome with material downloader 
