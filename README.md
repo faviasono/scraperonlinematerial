@@ -16,15 +16,14 @@ Feel free to uncomment the line below in the _configuration.py_ if you only  wan
 # options.add_argument('headless') 
 ```
 ### Material downloader
-The program will download all the course in the _Downloads_ directory of your os. After thast, it will create an hierarchical structure in the _Desktop_ folder. There should not be a folder called as _Name_Course_Material_ in Desktop, or the program will raise an exception.
+The program will download all the course in the _Downloads_ directory of your os. After that, it will create an hierarchical structure in the _Desktop_ folder. There should not be a folder called as _Name_Course_Material_ in Desktop, or the program will raise an exception.
 
 ## Usage
-You must write in _course_name_ variable in **app.py** the name of the course in your semester curriculum. (in the code is selected _Fisica II / Physics II_ )
 ```
 python3 app.py -u <username> -p <password>
 ```
 ## Task List
-- [ ] input course name & check if it exists
+- [x] input course name & check if it exists
 - [ ] headless chrome with material downloader 
 - [ ] add screenshots
 - [ ] considering new video lectures online platform for scraping & other courses name 
