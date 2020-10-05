@@ -1,4 +1,4 @@
-# polito-material-downloader
+# Scraper for online material for University platform
 
 My university, Politecnico di Torino, provides useful video lectures visible on the online platform. However, it is not possible to download them all together and watch them offline. You need to download each one after the other and I was tired of this procedure, and hence I have develop this program to download both course material (e.g. slides) and video lectures directly.
 
